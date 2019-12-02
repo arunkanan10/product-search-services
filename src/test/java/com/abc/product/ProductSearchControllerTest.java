@@ -1,4 +1,4 @@
-package com.atc.sms;
+package com.abc.product;
 
 import com.abc.product.controller.ProductSearchController;
 import com.abc.product.dto.Request;
