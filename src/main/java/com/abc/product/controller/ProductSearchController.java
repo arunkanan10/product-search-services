@@ -14,13 +14,15 @@ import java.util.List;
 public class ProductSearchController {
 
 	@Autowired
-    ProductSearchRepository hotelSearchRepository;
+    ProductSearchRepository productSearchRepository;
 	
-    public ProductSearchController() {}
+    public ProductSearchController(ProductSearchRepository productSearchRepository) {
+        this.productSearchRepository = productSearchRepository;
+    }
 
     @PostMapping("/product/search")
     public List<ProductDetails> search(@RequestBody Request request) {
-        List<ProductDetails> productList = hotelSearchRepository.search(request);
+        List<ProductDetails> productList = productSearchRepository.search(request);
         return productList;
     }
 }
